@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+    
+  <body style = "background-color: rgb(15, 128, 0);">
+  <div class="container">
+    
+    <center>
+
+      <h3 class = "btn btn-default header" style = "width: 80%; font-size: 22 px">Face Recognition Web App</h3>
+      
+      <br><br>
+
+      <p style="font-size: 22px;">Model is trained to identify the following people: </p>
+      <b class = "name-of-objects">
+        <hr>
+        Me - Ojas | Brother
+        <hr>
+      </b>
+    
+
+      <label>Webcam View - </label>
+
+      <label id = "countdown"></label>
+      <br><br>
+      <div id = "camera"></div>
+      <br><br>
+      <div id = "result"></div>
+
+      <br><br>
+      <button class = "btn btn-primary" onclick="takeSnapshot()">Take Snapshot</button>
+      <br><br>
+      <button class = "btn btn-success" onclick = "check()">Identify Person</button>
+      <br><br>
+
+      <p style="font-size: 22px;">Person :  <span id = "result-object">null</span></p>
+      <p style="font-size: 22px;">Accuracy :  <span id = "result-accuracy">nil?</span></p>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
